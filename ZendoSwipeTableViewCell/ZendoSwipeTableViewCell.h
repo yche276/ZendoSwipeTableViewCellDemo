@@ -3,7 +3,7 @@
 //  TestCell
 //
 //  Created by Victor Chen on 1/07/13.
-//  Copyright (c) 2013 Mt Zendo. All rights reserved.
+//  Copyright (c) 2013 Kiwa Media. All rights reserved.
 //
 typedef void (^BLOCK)();
 
@@ -35,6 +35,6 @@ typedef void (^BLOCK)();
 @protocol ZendoSwipeTableViewCellDelegate <NSObject>
 
 @optional
--(void)zendoTableviewCell:(UITableViewCell *)cell enableStateChanged:(BOOL)enable;
+-(void)mtTableviewCell:(UITableViewCell *)cell enableStateChanged:(BOOL)enable;
 
 @end

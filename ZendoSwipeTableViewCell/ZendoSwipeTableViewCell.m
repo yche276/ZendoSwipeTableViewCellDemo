@@ -3,7 +3,7 @@
 //  TestCell
 //
 //  Created by Victor Chen on 1/07/13.
-//  Copyright (c) 2013 Mt Zendo. All rights reserved.
+//  Copyright (c) 2013 Kiwa Media. All rights reserved.
 //
 //static CGFloat const 
 
@@ -59,14 +59,17 @@
     UIView *holderView = [[UIView alloc] initWithFrame:self.bounds];
     holderView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     holderView.backgroundColor = [UIColor clearColor];
-    [self insertSubview:holderView belowSubview:self.contentView];
+//    [self insertSubview:holderView belowSubview:self.contentView];
+    [self insertSubview:holderView atIndex:0];
+    
+    
     
     UIView *aView1 = [[UIView alloc] init];
     
     [aView1 setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.leftIndictorView = aView1;
     self.leftIndictorView.backgroundColor = [UIColor greenColor];
-    
+    [holderView addSubview:self.leftIndictorView];
     
     [holderView addConstraint:[NSLayoutConstraint constraintWithItem:self.leftIndictorView
                                                           attribute:NSLayoutAttributeHeight
@@ -102,14 +105,14 @@
                                                            constant:0.0]];
 
     
-    [holderView addSubview:self.leftIndictorView];
+    
     
     
     UIView *aView2 = [[UIView alloc] init];
     [aView2 setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.rightIndictorView = aView2;
     self.rightIndictorView.backgroundColor = [UIColor darkGrayColor];
-    
+    [holderView addSubview:self.rightIndictorView];
     
     [holderView addConstraint:[NSLayoutConstraint constraintWithItem:self.rightIndictorView
                                                            attribute:NSLayoutAttributeHeight
@@ -145,7 +148,7 @@
                                                           multiplier:1.0f
                                                             constant:0.0]];
     
-    [holderView addSubview:aView2];
+    
     
     
     
@@ -251,8 +254,8 @@
                 self.leftImageView.image = self.enableIconImage;
             }
             
-            if (self.delegate && [self.delegate respondsToSelector:@selector(zendoTableviewCell:enableStateChanged:)]) {
-                [self.delegate zendoTableviewCell:self enableStateChanged:self.enabled];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(mtTableviewCell:enableStateChanged:)]) {
+                [self.delegate mtTableviewCell:self enableStateChanged:self.enabled];
             }
         }
     }
