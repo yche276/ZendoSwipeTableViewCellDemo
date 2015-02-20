@@ -23,6 +23,12 @@
 		4A39C8B417DEC5CF00E97FF5 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A39C8B017DEC5CF00E97FF5 /* check@2x.png */; };
 		4A39C8B517DEC5CF00E97FF5 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A39C8B117DEC5CF00E97FF5 /* cross.png */; };
 		4A39C8B617DEC5CF00E97FF5 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A39C8B217DEC5CF00E97FF5 /* cross@2x.png */; };
+		DC4BCFF81A96D2DF00E8274E /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4BCFF51A96D2DF00E8274E /* more.png */; };
+		DC4BCFF91A96D2DF00E8274E /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4BCFF61A96D2DF00E8274E /* more@2x.png */; };
+		DC4BCFFA1A96D2DF00E8274E /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4BCFF71A96D2DF00E8274E /* more@3x.png */; };
+		DC4BCFFE1A96D2F500E8274E /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4BCFFB1A96D2F500E8274E /* delete.png */; };
+		DC4BCFFF1A96D2F500E8274E /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4BCFFC1A96D2F500E8274E /* delete@2x.png */; };
+		DC4BD0001A96D2F500E8274E /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4BCFFD1A96D2F500E8274E /* delete@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		4A39C8B017DEC5CF00E97FF5 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		4A39C8B117DEC5CF00E97FF5 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		4A39C8B217DEC5CF00E97FF5 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		DC4BCFF51A96D2DF00E8274E /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		DC4BCFF61A96D2DF00E8274E /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		DC4BCFF71A96D2DF00E8274E /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@3x.png"; sourceTree = "<group>"; };
+		DC4BCFFB1A96D2F500E8274E /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		DC4BCFFC1A96D2F500E8274E /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
+		DC4BCFFD1A96D2F500E8274E /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +148,12 @@
 				4A39C8B017DEC5CF00E97FF5 /* check@2x.png */,
 				4A39C8B117DEC5CF00E97FF5 /* cross.png */,
 				4A39C8B217DEC5CF00E97FF5 /* cross@2x.png */,
+				DC4BCFF51A96D2DF00E8274E /* more.png */,
+				DC4BCFF61A96D2DF00E8274E /* more@2x.png */,
+				DC4BCFF71A96D2DF00E8274E /* more@3x.png */,
+				DC4BCFFB1A96D2F500E8274E /* delete.png */,
+				DC4BCFFC1A96D2F500E8274E /* delete@2x.png */,
+				DC4BCFFD1A96D2F500E8274E /* delete@3x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -191,13 +209,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4BCFFA1A96D2DF00E8274E /* more@3x.png in Resources */,
+				DC4BD0001A96D2F500E8274E /* delete@3x.png in Resources */,
 				4A39C89317DEC4EF00E97FF5 /* InfoPlist.strings in Resources */,
 				4A39C89B17DEC4EF00E97FF5 /* Default.png in Resources */,
 				4A39C89D17DEC4EF00E97FF5 /* Default@2x.png in Resources */,
 				4A39C89F17DEC4EF00E97FF5 /* Default-568h@2x.png in Resources */,
 				4A39C8A517DEC4EF00E97FF5 /* ViewController.xib in Resources */,
+				DC4BCFFE1A96D2F500E8274E /* delete.png in Resources */,
 				4A39C8B317DEC5CF00E97FF5 /* check.png in Resources */,
+				DC4BCFF81A96D2DF00E8274E /* more.png in Resources */,
 				4A39C8B417DEC5CF00E97FF5 /* check@2x.png in Resources */,
+				DC4BCFF91A96D2DF00E8274E /* more@2x.png in Resources */,
+				DC4BCFFF1A96D2F500E8274E /* delete@2x.png in Resources */,
 				4A39C8B517DEC5CF00E97FF5 /* cross.png in Resources */,
 				4A39C8B617DEC5CF00E97FF5 /* cross@2x.png in Resources */,
 			);
@@ -301,6 +325,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZendoSwipeTableViewCellDemo/ZendoSwipeTableViewCellDemo-Prefix.pch";
 				INFOPLIST_FILE = "ZendoSwipeTableViewCellDemo/ZendoSwipeTableViewCellDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,6 +337,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZendoSwipeTableViewCellDemo/ZendoSwipeTableViewCellDemo-Prefix.pch";
 				INFOPLIST_FILE = "ZendoSwipeTableViewCellDemo/ZendoSwipeTableViewCellDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -336,6 +362,7 @@
 				4A39C8AA17DEC4EF00E97FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

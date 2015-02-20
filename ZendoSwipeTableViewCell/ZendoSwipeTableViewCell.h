@@ -36,5 +36,7 @@ typedef void (^BLOCK)();
 
 @optional
 -(void)mtTableviewCell:(UITableViewCell *)cell enableStateChanged:(BOOL)enable;
+-(void)mtzendoTableViewCell:(UITableViewCell *)cell onDeleteBtn:(id)sender;
+-(void)mtzendoTableViewCell:(UITableViewCell *)cell onMoreBtn:(id)sender;
 
 @end

@@ -69,7 +69,7 @@
     
     
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld", (long)indexPath.row];
     
     
     return cell;
@@ -94,7 +94,7 @@
      [detailViewController release];
      */
     
-    
+    NSLog(@"didSelectRowAtIndexPathdidSelectRowAtIndexPath");
 }
 
 

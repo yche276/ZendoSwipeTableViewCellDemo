@@ -65,7 +65,6 @@
     
     
     UIView *aView1 = [[UIView alloc] init];
-    
     [aView1 setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.leftIndictorView = aView1;
     self.leftIndictorView.backgroundColor = [UIColor greenColor];
@@ -156,6 +155,100 @@
     self.leftImageView = [[UIImageView alloc] init];
     [self.leftImageView setContentMode:UIViewContentModeCenter];
     [self.leftIndictorView addSubview:self.leftImageView];
+    
+//    CGRect rect = CGRectMake(0, 0, (float)(self.frame.size.width/4.0f), self.bounds.size.height);
+    UIButton *delBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    delBtn.backgroundColor = [UIColor redColor];
+//    [delBtn setTitle:NSLocalizedString(@"Delete", @"") forState:UIControlStateNormal];
+    delBtn.tintColor = [UIColor whiteColor];
+    [delBtn setImage:[UIImage imageNamed:@"delete.png"] forState:UIControlStateNormal];
+    [delBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [delBtn setFrame:rect];
+    [delBtn addTarget:self action:@selector(onDeleteBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [delBtn setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.rightIndictorView addSubview:delBtn];
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:delBtn
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                      multiplier:1.0f
+                                                                        constant:0.0]];
+    
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:delBtn
+                                                                       attribute:NSLayoutAttributeWidth
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeWidth
+                                                                      multiplier:0.5f
+                                                                        constant:0.0]];
+    
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:delBtn
+                                                                       attribute:NSLayoutAttributeTop
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeTop
+                                                                      multiplier:1.0
+                                                                        constant:0.0]];
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:delBtn
+                                                                       attribute:NSLayoutAttributeLeft
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeLeft
+                                                                      multiplier:1.0f
+                                                                        constant:0.0]];
+    
+    
+//    rect = CGRectMake((float)self.frame.size.width/4.0f, 0, (float)self.frame.size.width/4.0f, self.bounds.size.height-1);
+    UIButton *moreBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    moreBtn.backgroundColor = [UIColor lightGrayColor];
+//    [moreBtn setTitle:NSLocalizedString(@"More", @"") forState:UIControlStateNormal];
+    [moreBtn setImage:[UIImage imageNamed:@"more.png"] forState:UIControlStateNormal];
+    moreBtn.tintColor = [UIColor whiteColor];
+    [moreBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [moreBtn setFrame:rect];
+    [moreBtn addTarget:self action:@selector(onMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
+    delBtn.center = self.rightIndictorView.center;
+    [moreBtn setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.rightIndictorView addSubview:moreBtn];
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:moreBtn
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                      multiplier:1.0f
+                                                                        constant:0.0]];
+    
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:moreBtn
+                                                                       attribute:NSLayoutAttributeWidth
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeWidth
+                                                                      multiplier:0.5f
+                                                                        constant:0.0]];
+    
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:moreBtn
+                                                                       attribute:NSLayoutAttributeTop
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeTop
+                                                                      multiplier:1.0
+                                                                        constant:0.0]];
+    
+    [self.rightIndictorView addConstraint:[NSLayoutConstraint constraintWithItem:moreBtn
+                                                                       attribute:NSLayoutAttributeRight
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.rightIndictorView
+                                                                       attribute:NSLayoutAttributeRight
+                                                                      multiplier:1.0f
+                                                                        constant:0.0]];
  
 }
 
@@ -346,6 +439,19 @@
                                           }];
                      }];
 
+}
+
+#pragma mark - Action Methods
+- (void)onDeleteBtn:(UIButton *)sender{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mtzendoTableViewCell:onDeleteBtn:)]) {
+        [self.delegate mtzendoTableViewCell:self onDeleteBtn:sender];
+    }
+    
+}
+- (void)onMoreBtn:(UIButton *)sender{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mtzendoTableViewCell:onMoreBtn:)]) {
+        [self.delegate mtzendoTableViewCell:self onMoreBtn:sender];
+    }
 }
 @end
 
